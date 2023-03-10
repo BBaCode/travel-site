@@ -73,25 +73,25 @@ body {
 }
 
 .box:nth-child(1) {
-  background-image: url("./public/assets/pedro-monteiro-HfIex7qwTlI-unsplash.jpg");
+  background-image: url("/assets/pedro-monteiro-HfIex7qwTlI-unsplash.jpg");
   background-size: cover;
   background-position: 80% 80%;
   z-index: 7;
 }
 
 .box:nth-child(2) {
-  background-image: url("./public/assets/daniel-stenholm-FqhDUQUX8fQ-unsplash.jpg");
+  background-image: url("/assets/daniel-stenholm-FqhDUQUX8fQ-unsplash.jpg");
   z-index: 6;
   transform: rotate(6deg);
 }
 
 .box:nth-child(3) {
-  background-image: url("./public/assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-image: url("/assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   z-index: 5;
   transform: rotate(-9deg);
 }
 .box:nth-child(4) {
-  background-image: url("./public/assets/benjamin-voros-phIFdC6lA4E-unsplash.jpg");
+  background-image: url("/assets/benjamin-voros-phIFdC6lA4E-unsplash.jpg");
   z-index: 4;
   transform: rotate(4deg);
 }
