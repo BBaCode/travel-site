@@ -1,30 +1,13 @@
-// startAnim = () => {
-//   document.querySelector(".box1").classList.toggle("blue");
-//   document.querySelector(".box2").classList.toggle("orange");
-//   document.querySelector(".box3").classList.toggle("pink");
-// };
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("load");
+    } else entry.target.classList.remove("load");
+  });
+});
 
-// function runIt() {
-//   let blue = document.querySelector(".box1");
-//   window.addEventListener("load", () => {
-//     setTimeout(() => {
-//       blue.classList.toggle("blue");
-//     }, 3000);
-//   });
+const allInfo = document.querySelectorAll(".content");
 
-//   let orange = document.querySelector(".box2");
-//   window.addEventListener("load", () => {
-//     setTimeout(() => {
-//       orange.classList.toggle("orange");
-//     }, 8000);
-//   });
-
-//   let pink = document.querySelector(".box3");
-//   window.addEventListener("load", () => {
-//     setTimeout(() => {
-//       pink.classList.toggle("pink");
-//     }, 13000);
-//   });
-// }
-
-// runIt();
+allInfo.forEach((el) => {
+  observer.observe(el);
+});
