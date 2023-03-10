@@ -1,0 +1,313 @@
+body {
+  background-color: #ffbc4b;
+  margin: 0;
+  animation: backgroundColorChange 23s 2s forwards;
+  font-family: "Roboto Slab";
+}
+
+#app {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.start {
+  margin-right: 10rem;
+}
+
+.content {
+  min-width: 40%;
+
+  font-weight: 600;
+  position: relative;
+}
+
+.message {
+  width: 100%;
+  font-size: 6rem;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.message:nth-child(1) {
+  text-align: center;
+  animation: fadeOut 2s 3s forwards;
+}
+
+.message:nth-child(2) {
+  opacity: 0;
+  animation: fadeInOut 6s 5s linear;
+}
+
+.message:nth-child(3) {
+  opacity: 0;
+  animation: fadeInOut 6s 11s linear;
+}
+
+.message:nth-child(4) {
+  opacity: 0;
+  animation: fadeIn 2s 17s forwards;
+  color: white;
+}
+
+.boxes {
+  position: relative;
+  height: 500px;
+  width: 500px;
+}
+
+.box {
+  position: absolute;
+  width: 500px;
+  aspect-ratio: 1 / 1;
+  top: 25px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+}
+
+.box:nth-child(1) {
+  background-image: url("./public/assets/pedro-monteiro-HfIex7qwTlI-unsplash.jpg");
+  background-size: cover;
+  background-position: 80% 80%;
+  z-index: 7;
+}
+
+.box:nth-child(2) {
+  background-image: url("./public/assets/daniel-stenholm-FqhDUQUX8fQ-unsplash.jpg");
+  z-index: 6;
+  transform: rotate(6deg);
+}
+
+.box:nth-child(3) {
+  background-image: url("./public/assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  z-index: 5;
+  transform: rotate(-9deg);
+}
+.box:nth-child(4) {
+  background-image: url("./public/assets/benjamin-voros-phIFdC6lA4E-unsplash.jpg");
+  z-index: 4;
+  transform: rotate(4deg);
+}
+
+.blue {
+  animation: blueCard 2s ease forwards;
+  animation-delay: 5s;
+}
+
+.orange {
+  animation: orangeCard 2s ease forwards;
+  animation-delay: 11s;
+}
+
+.pink {
+  animation: pinkCard 2s ease forwards;
+  animation-delay: 17s;
+}
+
+.star {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: yellow;
+  opacity: 0;
+}
+
+.star:nth-child(1) {
+  top: 10%;
+  left: 5%;
+  animation: sparkle 2s 25s infinite;
+}
+
+.star:nth-child(2) {
+  top: 40%;
+  left: 7%;
+}
+
+.star:nth-child(3) {
+  top: 10%;
+  left: 8%;
+  animation: sparkle 2.5s 23s infinite;
+}
+
+.star:nth-child(4) {
+  top: 80%;
+  left: 23%;
+  animation: sparkle 2s 24s infinite;
+}
+
+.star:nth-child(5) {
+  top: 22%;
+  left: 32%;
+  animation: sparkle 2s 26s infinite;
+}
+
+.star:nth-child(6) {
+  top: 090%;
+  left: 40%;
+  animation: sparkle 3.2s 23.4s infinite;
+}
+
+.star:nth-child(7) {
+  top: 6%;
+  left: 50%;
+  animation: sparkle 3.2s 22.1s infinite;
+}
+
+.star:nth-child(8) {
+  top: 15%;
+  left: 84%;
+  animation: sparkle 2.3s 23.5s infinite;
+}
+
+.star:nth-child(9) {
+  top: 10%;
+  left: 74%;
+  animation: sparkle 2.4s 24.5s infinite;
+}
+
+.star:nth-child(10) {
+  top: 90%;
+  left: 94%;
+  animation: sparkle 2.6s 21.6 infinite;
+}
+
+@keyframes blueCard {
+  0% {
+    /* transform: rotate(0deg); */
+  }
+
+  30% {
+    transform: translate(700px);
+  }
+
+  80% {
+    z-index: 3;
+  }
+
+  100% {
+    transform: translate(0) rotate(-5deg);
+    z-index: 3;
+  }
+}
+
+@keyframes orangeCard {
+  0% {
+    /* transform: rotate(0deg); */
+  }
+
+  30% {
+    transform: translate(700px);
+  }
+
+  90% {
+    z-index: 2;
+  }
+
+  100% {
+    transform: translate(0) rotate(8deg);
+    z-index: 2;
+  }
+}
+
+@keyframes pinkCard {
+  0% {
+    /* transform: rotate(0deg); */
+  }
+
+  30% {
+    transform: translate(700px);
+  }
+
+  90% {
+    z-index: 1;
+  }
+
+  100% {
+    transform: translate(0) rotate(0deg);
+    z-index: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes backgroundColorChange {
+  0% {
+    background-color: #f3c575;
+  }
+
+  33% {
+    background-color: #65c5ee;
+  }
+
+  66% {
+    background-color: #ec8a6c;
+  }
+
+  100% {
+    background-color: #000000;
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+    color: white;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
